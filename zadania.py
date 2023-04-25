@@ -51,20 +51,21 @@ for i in range(n_rows):
 # dodanie słowa po ukosie (od prawej do lewej)
 diagonal_word = 'NUM'
 for i in range(len(diagonal_word)):
-    matrix[i, n_cols-len(diagonal_word)+i] = diagonal_word[i]
+    matrix[i, 0+i] = diagonal_word[i]
 
 # ponowne wypisanie macierzy w postaci wykreślanki z dodanym słowem po ukosie
 print()
-for i in range(n_rows):
-    for j in range(n_cols):
+for i in range(len(diagonal_word)):
+    for j in range(len(diagonal_word)):
         if matrix[i, j] != '':
             print(matrix[i, j], end=' ')
         else:
             print(' ', end=' ')
     print()
-#ZAD7
 
-def genmacierz(n):
+
+#ZAD7
+    def genmacierz(n):
     # Tworzenie macierzy n*n wypełnionej zerami
     matrix = np.zeros((n, n), dtype=int)
 
