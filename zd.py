@@ -22,7 +22,7 @@ import seaborn as sns
 # plt.title('Histogram')
 # plt.grid()
 # plt.show()
-#
+
 # df = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
 # print(df)
 # seria = df.groupby('Imię i nazwisko')['Wartość zamówienia'].sum()
