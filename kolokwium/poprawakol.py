@@ -59,7 +59,7 @@ import seaborn as sns
 df = pd.read_csv('handel.csv', header=0, sep=',', decimal='.')
 wartosc = df.groupby('Wyszczegolnienie')['Wartosc'].sum()
 
-plt.bar(wartosc.index, wartosc.values)
+plt.pie(wartosc.index, wartosc.values)
 
 for i, value in enumerate(wartosc.values):
     plt.text(i, value, str(value), ha='center', va='bottom')
